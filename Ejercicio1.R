@@ -26,5 +26,5 @@ arrange(respuesta4,n)
 #Pregunta 5# ¿A qué hora se registran más visitantes?
 visitantes <- filter(e_dataframe,visitor=="true")
 hora <- group_by(visitantes,hour_tz)
-respuesta5 <- count(hora)
-arrange(respuesta5,n)
+respuesta5 <- count(hora)%>%
+arrange(n)
